@@ -3,7 +3,6 @@ import './App.css';
 
 function Counter() {
   const [countdown, setCountdown] = useState('');
-  const [quote, setQuote] = useState('');
   const [stars, setStars] = useState([]);
   const getNStarts = (numberOfStarts, maxOpacity, minOpacity, maxSize, isSolid) => {
     const newStars = [];
@@ -47,7 +46,6 @@ function Counter() {
         setCountdown({ days, hours, minutes, seconds });
       }
     }, 1000);
-    setQuote(defaultQuote);
     setStars(constantStarts.concat(...getNStarts(15, 95, 75, 5, false)));
     const starsInterval = setInterval(() => {
       generateStars();
@@ -61,8 +59,7 @@ function Counter() {
 
   return (
     <div className="counter-container">
-      <h1>{quote}</h1>
-      <div className="quote">{quote}</div>
+      <div className="quote">{defaultQuote}</div>
       <div className="countdown">
         <section>
           <ul>
