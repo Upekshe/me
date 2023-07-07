@@ -59,7 +59,7 @@ function Counter() {
 
   return (
     <div className="counter-container">
-      <div className="quote">{defaultQuote}</div>
+      <h1>{defaultQuote}</h1>
       <div className="countdown">
         <section>
           <ul>
